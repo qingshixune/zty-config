@@ -59,7 +59,7 @@ redis:
   type: standalone
   config :
     type: manual
-  host: 127.0.1
+  host: 127.0.0.1
   port: 6379
   password:
   maxIdle: 500
