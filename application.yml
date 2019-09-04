@@ -1,0 +1,116 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://42.159.93.196:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: wxll@123456
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      web-stat-filter:
+        enabled: false
+      goods:
+        url: jdbc:mysql://42.159.93.196:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+
+      member:
+        url: jdbc:mysql://42.159.93.196:3306/member?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        
+      sss:
+        url: jdbc:mysql://42.159.93.196:3306/statistic?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+
+      system:
+        url: jdbc:mysql://42.159.93.196:3306/system?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+
+      trade:
+        url: jdbc:mysql://42.159.93.196:3306/trade?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+
+      distribution:
+        url: jdbc:mysql://42.159.93.196:3306/distribution?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  rabbitmq:
+    host: 42.159.93.196
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 42.159.10.252:9300
+      xpack:
+        security:
+          user:
+  # 格式  elastic:changeme
+  # 上传文件大小上限设置
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.enation.app : ERROR
+
+redis:
+  type: standalone
+  config :
+    type: manual
+  host: 127.0.0.1
+  port: 6379
+  password:
+  maxIdle: 500
+  maxTotal: 500
+  maxWaitMillis: -1
+javashop:
+  product: stand
+  license[0]: 3fa9e52f507f839a664d9622358e4fc9ecf1c3b81876e7ea70f17b371954a0659e3bc6b0150458038c6976f7808a5ba236935d989c8a2228aaeca59f03c6925828bfe2ea7182792c7bdd26882b85e36af3b65d32de514fea98f207f4fb7386132e8a01847d3b8aa3d3e1ada6d7704869f58f24259ba7ed33067b830b4a7ae1cf,4a0a2e796ef27271c887b4e52d1670f6df2f490babd7a6afb7010ce9bf1d14546f3fc72fae5be63ef75558627b754804544371fb263981d0337631aaa17e011a
+  timeout:
+    accessTokenTimeout:  1800
+    refreshTokenTimeout: 3600
+    captchaTimout:  120
+    smscodeTimout: 120
+  alipay:
+    merchant-private-key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCDiC2vhhp/n//DwWivMeMiAB6VDsyEPuLAtNH/WAUF2RIQuo+fGI6ZKWJdqRI8WjoGonZAKCuGnvY7c2858wbaU2bEUwQ16/PvE/WyqGNKQV5Acj9krLm/hq2Dl3Dho8YLZRfLQWS7F7kfmNmhW0QlfkDBWJcHV+JdPHKbc/Ex6A7ohpwRdhSXUnfQk/CzJJgg1rGkctW2Izso1TJqiANKhrH0TTx1nL6vaJojhbbd0UVYjmnvhUytjo07N1J39TH11FtXFR+3pJj8i+Poyw80OtQ/mraOdph8Gc69i8JHJce0hzgPJ3KtZzDkgfW7XDZse5qVi5FNQuPQEmcIa/MnAgMBAAECggEAXHxqs1r2UvssGndqppXLgeLXnjPztqGJS7tZVdSMY5pIy56C0nmv+x5QXk891VYUKwodX+te/5/Sv+bhNLwf+3BdeHpvIYMx2NAOGXuxpUrlfSdYT+/sBDIs27Sm2OIRpX2GB5OJwsxhjUgq7vx/pGVsHwet2qn/L1QLuicCV/YzGavgtTz1nnLys1E/jCCLUwCB8XHc9YkRy70GG9gd0inrq0DWh87PDuF8/Eba8XH1To1Gwf6rfzI++XLGjE3pZkJYbkj4fxzxI2z8V6C3AWBmD1y4v82baJzMeGWP/32YtYsycWBFUgAGu3Tay2bTFeBBOYhyapdjqSu0//bq8QKBgQDJ3u6efjMqirQOf+NK/aXv4fULQ9AYNoa5uJ4g2ToYuEaY5Qy/EIqxtLg7rP5F7arPEP9cuiRZO5kBzdIxO6UqI/9eeuRBnldHN7GJ0RTcPf1yOCmaBP7abKHzgKQH7Fmj9A0Q3F6rtnGEgTiVL3tb7roN3udCzt3YG7HWkcPaXQKBgQCmzPUj0qvtWjkv6ozgnCDxLaZY5GipqIJpFFCGH9dj1MVqThoXup1q6QUfIjvN6QBIH4YiM1Zo6E+eGEn8kIR8R8L5PAutC4F4p3QaIu11tspQMqWQav1DYwIC1F13EBeAfz9HKRSrh/IlslGerPTwVLHgp8nql6DGamUhPKBTUwKBgExKtGOxziSFxwazznLI6a1+990KA9siwEfwPdKsRgiRnBysc+TBm6kNY5MqDe7fo24ePmQM9S/EFk9YOdfhcso6UIikaR9jeBiyM6aiHgAebWp9TzumJ6rk40/jjhpweHA+C7ITlrPOf5hUPc4j47savbYAR+Y3yB+kV9F/xUUBAoGBAIIsbhvY7Ag+Y2b7u5oG/sZ6A9pX1z6gnbX3/qfN7cCharf93+so3nVzCWY0x0t5TZj70SibvBH/SzNsbUFIX7zGHGl57PrNgetxc/B51awKTXWtMPy2IpUWjZk7tv2Wd2D27aFRdCox3E6DDaOyAy4USwWyrKgCUZzHp8j6kXy1AoGAIXDPI/TEDJYSPyqbQ4aWYB2papLtLREqoM9cl7HtT/RAjccZkOC7QE2eeCgNEKhSV//7xx0z1p63BHLZMNCOJET/uVGRjuRbUnbCWDHl/TNLI2bZDrhPnAu6dfBr5B2vvBDlvVAi3dkqIqsTnnflL6AWVIEzujKgkAM1MaOTkbI=
+    app-id: 2016091100489615
+    alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA45v/9T6dSxa8l31PVmn5m4nhOUDgz+Qi0yPE5t444u3rja+79areaxVXT0gVDu6d6GS62WxoNFYwIs5x4gxLGqp9Qsd+AmAXCAuv2yKgVvlLvgzFvddFuGOGMcaw/dG9vuGxmHSBz7KPlxaWw0Yahdwrstcc7Nmy/g1wdBHJ1DjwtHlimBCzq+OlsO+4jOA3YVupCs5FrZz28FZAdlbdiDKFHH66oZtbZrrcY8ZSzyS7uBZ9H6B49UAgmuDmpjPu9H50XcKD0M5EKOW/tApKG1j27s6KPYT2ITCsAs2f3FneRJebIt8h9/VbgpldOQvwv5rVmJ7usWCVRXrHKOnWfwIDAQAB
+  weixin:
+    pc:
+      mchid: 1272875901
+      appid: wxde2fcd7d020b05e5
+      app-secret: 21445a61830e5a640535f86f2ad49ca5
+      key: 21445a61830e5a640535f86f2ad49ca5
+      p12-path:
+    native:
+      mchid: 1416251702
+      appid: wx35ab0feca89af616
+      app-secret: 4cd989ee3e8bd08149b6a8414eb36207
+      key: 4cd989ee3e8bd08149b6a8414eb36207
+      p12-path:
+    react:
+      mchid: 1486907722
+      appid: wxea6dad1bd46739b4
+      app-secret: 1ac868cc99daca271e7edd0b506145b1
+      key: 1ac868cc99daca271e7edd0b506145b1
+      p12-path:
+  domain:
+    main: domain.com
+    buyer: http://42.159.93.196:3000
+    mobileBuyer: http://42.159.10.252:3001
+xxl:
+  job:
+    admin:
+      addresses:  http://127.0.0.1:8080/xxl-job-admin
+    executor:
+      appname: timing-job-execute 
+      ip: 
+      port: 6999
+      logpath:  /opt/xxl-server-logs
+      logretentiondays: -1
+    accessToken:
+    
+    
+    
