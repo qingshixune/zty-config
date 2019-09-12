@@ -5,7 +5,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
       web-stat-filter:
         enabled: false
@@ -28,6 +28,13 @@ spring:
         url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&autoReconnect=true
   jackson:
     property-naming-strategy: SNAKE_CASE
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # 开启驼峰命名
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
 
   # rabbitmq:
   #   host: 42.159.93.196
