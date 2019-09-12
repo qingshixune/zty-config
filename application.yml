@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,22 +10,22 @@ spring:
       web-stat-filter:
         enabled: false
       goods:
-        url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8
 
       member:
-        url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8
         
       sss:
-        url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8
 
       system:
-        url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8
 
       trade:
-        url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8
 
       distribution:
-        url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+        url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8
   jackson:
     property-naming-strategy: SNAKE_CASE
   jpa:
