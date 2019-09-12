@@ -12,20 +12,20 @@ spring:
       goods:
         url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&autoReconnect=true
 
-      # member:
-      #   url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      member:
+        url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&autoReconnect=true
         
-      # sss:
-      #   url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      sss:
+        url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&autoReconnect=true
 
-      # system:
-      #   url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      system:
+        url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&autoReconnect=true
 
-      # trade:
-      #   url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      trade:
+        url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&autoReconnect=true
 
-      # distribution:
-      #   url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      distribution:
+        url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&autoReconnect=true
   jackson:
     property-naming-strategy: SNAKE_CASE
   jpa:
