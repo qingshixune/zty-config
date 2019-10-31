@@ -2,30 +2,45 @@ spring:
   profiles:
     active: dev
   datasource:
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
       web-stat-filter:
         enabled: false
       goods:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
 
       member:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
-        
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
       sss:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
 
       system:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
 
       trade:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
 
       distribution:
         jdbc-url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        
   jackson:
     property-naming-strategy: SNAKE_CASE
   jpa:
