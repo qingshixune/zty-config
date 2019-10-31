@@ -10,22 +10,22 @@ spring:
       web-stat-filter:
         enabled: false
       goods:
-        url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
 
       member:
-        url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/member?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
         
       sss:
-        url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/statistic?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
 
       system:
-        url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/system?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
 
       trade:
-        url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/trade?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
 
       distribution:
-        url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/distribution?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
   jackson:
     property-naming-strategy: SNAKE_CASE
   jpa:
